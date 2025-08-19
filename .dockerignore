@@ -1,0 +1,24 @@
+# Version control
+.git/
+.gitignore
+
+# Local data and logs
+data/
+logs/
+mlruns/
+
+# Development-only scripts and temporary files
+notebooks/
+tuning/
+__pycache__/
+.ipynb_checkpoints/
+
+# Documentation
+README.md
+
+# Python bytecode
+*.pyc
+*.pyo
+
+# OS-specific
+Thumbs.db

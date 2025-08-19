@@ -1,0 +1,165 @@
+2025-08-18 11:51:59 | __main__ | INFO | Starting pipeline...
+
+2025-08-18 11:51:59 | __main__ | INFO | - Step 1: Load raw data
+2025-08-18 11:51:59 | src.load_data | INFO | Loading data from: D:\late-shipment-prediction-ml\data\raw\shipments_raw.csv
+2025-08-18 11:52:02 | src.load_data | INFO | Raw data successfully loaded
+2025-08-18 11:52:02 | __main__ | INFO | - Step 2: Clean raw data
+2025-08-18 11:52:03 | src.clean_data | INFO | Raw data cleaned successfully
+2025-08-18 11:52:03 | __main__ | INFO | - Step 3: Feature engineering
+2025-08-18 11:52:04 | src.feature_engineering | INFO | Feature engineering completed successfully
+2025-08-18 11:52:04 | __main__ | INFO | - Step 4: Preprocess features
+2025-08-18 11:52:04 | src.preprocess_features | INFO | Saving unprocessed data to: D:\late-shipment-prediction-ml\data\unprocessed
+2025-08-18 11:52:05 | src.preprocess_features | INFO | Saving preprocessed data to: D:\late-shipment-prediction-ml\data\preprocessed
+2025-08-18 11:52:05 | src.preprocess_features | INFO | Preprocessing completed successfully
+2025-08-18 11:52:05 | __main__ | INFO | - Step 5: Train late model
+2025-08-18 11:52:05 | src.train_late_model | INFO | Training Random Forest model with best parameters...
+2025-08-18 11:57:28 | src.train_late_model | INFO | Training Accuracy: 0.9803
+2025-08-18 11:57:28 | src.train_late_model | INFO | Test Accuracy:     0.8614
+2025-08-18 11:57:29 | src.train_late_model | INFO | Model saved to: D:\late-shipment-prediction-ml\models\late_model.pkl
+2025-08-18 11:57:29 | src.train_late_model | INFO | Top 10 Feature Importances:
+2025-08-18 11:57:29 | src.train_late_model | INFO | shipping_mode_Standard Class: 0.1446
+2025-08-18 11:57:29 | src.train_late_model | INFO | shipping_mode_First Class: 0.1255
+2025-08-18 11:57:29 | src.train_late_model | INFO | order_value: 0.0940
+2025-08-18 11:57:29 | src.train_late_model | INFO | order_city: 0.0737
+2025-08-18 11:57:29 | src.train_late_model | INFO | order_state: 0.0622
+2025-08-18 11:57:29 | src.train_late_model | INFO | day: 0.0589
+2025-08-18 11:57:29 | src.train_late_model | INFO | units_per_order: 0.0442
+2025-08-18 11:57:29 | src.train_late_model | INFO | order_country: 0.0390
+2025-08-18 11:57:29 | src.train_late_model | INFO | shipping_mode_Second Class: 0.0389
+2025-08-18 11:57:29 | src.train_late_model | INFO | order_profit_per_order: 0.0381
+2025-08-18 11:57:29 | src.train_late_model | INFO | Late model training completed successfully.
+
+2025-08-18 11:57:29 | __main__ | INFO | - Step 6: Train very late model
+2025-08-18 11:57:29 | src.train_very_late_model | INFO | Training Random Forest model with best parameters...
+2025-08-18 11:59:25 | src.train_very_late_model | INFO | Training Recall: 1.0000
+2025-08-18 11:59:25 | src.train_very_late_model | INFO | Test Recall:     0.9758
+2025-08-18 11:59:26 | src.train_very_late_model | INFO |  Threshold used: 0.3 | Avg Precision: 0.9549
+2025-08-18 11:59:26 | src.train_very_late_model | INFO | Model saved to: D:\late-shipment-prediction-ml\models\very_late_model.pkl
+2025-08-18 11:59:26 | src.train_very_late_model | INFO | Top 10 Feature Importances:
+2025-08-18 11:59:26 | src.train_very_late_model | INFO | shipping_mode_Second Class: 0.4781
+2025-08-18 11:59:26 | src.train_very_late_model | INFO | shipping_mode_Standard Class: 0.0755
+2025-08-18 11:59:26 | src.train_very_late_model | INFO | order_value: 0.0627
+2025-08-18 11:59:26 | src.train_very_late_model | INFO | order_city: 0.0483
+2025-08-18 11:59:26 | src.train_very_late_model | INFO | order_state: 0.0413
+2025-08-18 11:59:26 | src.train_very_late_model | INFO | day: 0.0351
+2025-08-18 11:59:26 | src.train_very_late_model | INFO | units_per_order: 0.0289
+2025-08-18 11:59:26 | src.train_very_late_model | INFO | order_country: 0.0268
+2025-08-18 11:59:26 | src.train_very_late_model | INFO | customer_state: 0.0253
+2025-08-18 11:59:26 | src.train_very_late_model | INFO | month: 0.0228
+2025-08-18 11:59:26 | src.train_very_late_model | INFO | Very late model training completed successfully.
+
+2025-08-18 11:59:26 | __main__ | INFO | 
+ Pipeline completed in 7 min 27.18 sec
+2025-08-18 12:14:09 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:14:14 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:14:19 | __main__ | INFO | Received request to /predict_very_late endpoint
+2025-08-18 12:14:20 | __main__ | INFO | Prediction generated: 0
+2025-08-18 12:14:39 | __main__ | INFO | Received request to /predict_very_late endpoint
+2025-08-18 12:14:39 | __main__ | INFO | Prediction generated: 0
+2025-08-18 12:14:40 | __main__ | INFO | Received request to /predict_very_late endpoint
+2025-08-18 12:14:40 | __main__ | INFO | Prediction generated: 0
+2025-08-18 12:16:45 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:16:58 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:17:11 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:17:16 | __main__ | INFO | Received request to /predict_very_late endpoint
+2025-08-18 12:17:16 | __main__ | INFO | Prediction generated: 0
+2025-08-18 12:17:20 | __main__ | INFO | Received request to /predict_very_late endpoint
+2025-08-18 12:17:20 | __main__ | INFO | Prediction generated: 0
+2025-08-18 12:17:22 | __main__ | INFO | Received request to /predict_very_late endpoint
+2025-08-18 12:17:22 | __main__ | INFO | Prediction generated: 0
+2025-08-18 12:17:25 | __main__ | INFO | Received request to /predict_very_late endpoint
+2025-08-18 12:17:25 | __main__ | INFO | Prediction generated: 0
+2025-08-18 12:17:36 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:17:54 | __main__ | INFO | Received request to /predict_very_late endpoint
+2025-08-18 12:17:55 | __main__ | INFO | Prediction generated: 0
+2025-08-18 12:18:09 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:18:21 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:18:51 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:19:13 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:19:19 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:20:13 | __main__ | INFO | Received request to /predict_both endpoint
+2025-08-18 12:20:13 | __main__ | INFO | Both predictions generated - Late: 0, Very Late: 0
+2025-08-18 12:20:23 | __main__ | INFO | Received request to /predict_late endpoint
+2025-08-18 12:20:24 | __main__ | INFO | Late prediction generated: 0
+2025-08-18 12:20:29 | __main__ | INFO | Received request to /predict_very_late endpoint
+2025-08-18 12:20:30 | __main__ | INFO | Very late prediction generated: 0
+2025-08-18 12:20:30 | __main__ | INFO | Received request to /predict_very_late endpoint
+2025-08-18 12:20:30 | __main__ | INFO | Very late prediction generated: 0
+2025-08-18 12:20:33 | __main__ | INFO | Received request to /predict_very_late endpoint
+2025-08-18 12:20:33 | __main__ | INFO | Very late prediction generated: 0
+2025-08-18 12:20:39 | __main__ | INFO | Received request to /predict_both endpoint
+2025-08-18 12:20:39 | __main__ | INFO | Both predictions generated - Late: 0, Very Late: 0
+2025-08-18 12:23:09 | __main__ | INFO | Received request to /predict_late endpoint
+2025-08-18 12:23:09 | __main__ | INFO | Late prediction generated: 0
+2025-08-18 12:23:10 | __main__ | INFO | Received request to /predict_late endpoint
+2025-08-18 12:23:10 | __main__ | INFO | Late prediction generated: 0
+2025-08-18 12:23:10 | __main__ | INFO | Received request to /predict_late endpoint
+2025-08-18 12:23:10 | __main__ | INFO | Late prediction generated: 0
+2025-08-18 12:23:21 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:23:21 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:29:26 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:29:26 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:29:36 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:29:36 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:31:34 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:31:34 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:34:12 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:34:12 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:34:31 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:34:31 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:35:23 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:35:23 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:48:45 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:48:45 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:49:23 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:49:23 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:50:14 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:50:14 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:50:27 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:50:28 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:50:38 | __main__ | INFO | Received request to /predict_late endpoint
+2025-08-18 12:50:38 | __main__ | INFO | Late prediction generated: 0
+2025-08-18 12:50:45 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:50:45 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:51:07 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:51:07 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:51:17 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:51:18 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:51:43 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:51:43 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:52:23 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:52:23 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:53:12 | __main__ | INFO | Received request to /predict_late endpoint
+2025-08-18 12:53:12 | __main__ | INFO | Late prediction generated: 0
+2025-08-18 12:57:09 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:57:09 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:57:33 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 12:57:33 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:00:09 | __main__ | INFO | Received request to /predict_late endpoint
+2025-08-18 13:00:09 | __main__ | INFO | Late prediction generated: 0
+2025-08-18 13:03:32 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:03:32 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:03:59 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:03:59 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:04:24 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:04:24 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:05:21 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:05:21 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:05:33 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:05:33 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:05:46 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:05:46 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:06:53 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:06:53 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:07:11 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:07:11 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:07:24 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:07:24 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:07:45 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:07:45 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:08:07 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:08:08 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:17:00 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 13:17:05 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 14:42:52 | __main__ | INFO | All models and preprocessors loaded successfully
+2025-08-18 14:42:58 | __main__ | INFO | All models and preprocessors loaded successfully
